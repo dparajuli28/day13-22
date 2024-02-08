@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //comparision operator
+      let a = 30;
+      let b = "30";
+
+      console.log("a==b", a == b); //value equal
+      console.log("a===b", a === b); //value and type equal
+
+      console.log("a!=b", a != b); //not equal value
+      console.log("a!==b", a !== b); //not equal value and not equal type
+
+      let x = 18;
+      console.log("x>=y", x >= 18);
+      console.log("x<=y", x <= 18);
+
+      //concat string
+      let text1 = "my name is";
+      let text2 = "Deepak Parajuli";
+      let text3 = ".";
+
+      const thirdString = text1 + " " + text2 + text3;
+      console.log(thirdString);
+
+      console.log("A>B", "A" > "B"); //string A is smallest and string Z is the heighest in alfabets.
+      console.log("A<B", "A" < "B");
+
+      //converting string to number
+      const string1 = "ABC";
+      const string2 = "55";
+
+      const changeString1Num = Number(string1);
+      const ChangeString2Num = Number(string2);
+
+      console.log(string1, changeString1Num);
+      console.log(
+        string2,
+        typeof string2,
+        ChangeString2Num,
+        typeof ChangeString2Num
+      );
+
+      //logical operator
+
+      //logical Not
+      console.log(!false);
+
+      let email = null;
+      let password;
+      if (!email) {
+        console.log("Enter your email");
+      }
+
+      console.log("email", email);
+      console.log("!password", !password);
+
+      //logical and
+      //logical or
+      let student1 = 21;
+      let student2 = 17;
+
+      console.log("You can enter a club", student1 >= 18 && student2 >= 18); //both should be 18 if not false in logical and
+      console.log("You can enter a club", student1 >= 18 || student2 >= 18); //one should be 18 then it will be true in logical or
+
+      //object & array
+      // we can have any type of items inside object and array even object contains object and array contains object
+
+      let carModel1 = {
+        Firstname: "Mercedez",
+        "Last name": "Benz",
+        madeYear: "2012",
+        madeIn: "USA",
+        kilometersRun: "90000",
+        color: "white",
+        isSold: false,
+        address: {
+          city: "washington",
+          postalcode: "999",
+          ownerDetails: {
+            ownerName: "Haris",
+            phoneNum: 999,
+          },
+        },
+      };
+      console.log(carModel1["Last name"]); //when you have space you cannot use dot property
+      console.log(carModel1.Firstname); //when you have not space you can use both property
+      console.log(carModel1.address.ownerDetails.ownerName);
+      console.log(carModel1["address"]["ownerDetails"]["ownerName"]);
+
+      let carModel2 = {
+        Firstname: "Mercedez",
+        "Last name": "Benz",
+        madeYear: "2012",
+        madeIn: "USA",
+        kilometersRun: "90000",
+        color: "white",
+        isSold: false,
+        address: {
+          city: "washington",
+          postalcode: "999",
+          ownerDetails: {
+            ownerName: "Haris",
+            phoneNum: 999,
+          },
+        },
+      };
+      console.log(carModel1 == carModel2); //two objects cannot be equal even if have same data inside
+      console.log(carModel1 === carModel2);
+
+      console.log(carModel1.Firstname == carModel2.Firstname); //but the data can be showed equal inside different object
+
+      //Array
+      const arr = [1, 2, 3, 4, 5];
+      console.log(arr);
+      console.log("Length:", arr.length);
+      console.log(arr[0]);
+      console.log(arr[4]);
+      console.log(arr[5]); //if there is no arr[5] it will be undefined.
+      console.log(arr[arr.length - 1]); //for last item or index on array
+
+      const students = ["ram", "shyam", "hari", "sita", "gita"];
+
+      console.log(students.length - 1); //for last index length
+
+      let lastElement = students[students.length - 1];
+      console.log(lastElement); //you can also write like this for last index in array
+    </script>
+  </body>
+</html>
